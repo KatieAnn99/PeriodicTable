@@ -2,10 +2,7 @@
 var modal = document.getElementById("myModal");
 var modalContent = document.getElementById("modalText");
 
-// Get the button that opens the modal
-// var btn = document.getElementById("myBtn");
-
-// Instead get the array of buttons with a class of open-modal
+// Get the array of buttons with a class of open-modal
 var buttons = document.querySelectorAll(".open-modal");
 
 /*
