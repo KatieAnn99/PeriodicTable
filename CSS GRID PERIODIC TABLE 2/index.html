@@ -12,6 +12,17 @@
       Elements
     </h1>
 
+    <!--FILTER BUTTONS-->
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('all')">
+        Show all
+      </button>
+      <button class="btn" onclick="filterSelection('red')">Red</button>
+      <button class="btn" onclick="filterSelection('yellow')">Yellow</button>
+      <button class="btn" onclick="filterSelection('blue')">Blue</button>
+      <button class="btn" onclick="filterSelection('green')">Green</button>
+    </div>
+
     <!--THE TABLE-->
     <div id="myModal" class="modal">
       <div class="modal-content">
@@ -21,11 +32,11 @@
     </div>
     <div id="container"></div>
 
-    <div class="periodic-table">
+    <div class="periodic-table" class="filter-container">
       <div class="empty-space-1"></div>
       <div class="empty-space-2"></div>
 
-      <button class="open-modal" data-id="h1">
+      <button class="open-modal filterDiv yellow" data-id="h1">
         <div class="periodic-element one">
           <div class="periodic-table-inner">
             <div class="title">h1</div>
@@ -34,7 +45,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="style">
+      <button class="open-modal filterDiv yellow" data-id="style">
         <div class="periodic-element one">
           <div class="periodic-table-inner">
             <div class="title">Style</div>
@@ -43,7 +54,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="anchor">
+      <button class="open-modal filterDiv blue" data-id="anchor">
         <div class="periodic-element two">
           <div class="periodic-table-inner">
             <div class="title">A</div>
@@ -52,7 +63,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="comment">
+      <button class="open-modal filterDiv green" data-id="comment">
         <div class="periodic-element three">
           <div class="periodic-table-inner">
             <div class="title">!-></div>
@@ -61,7 +72,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="svg">
+      <button class="open-modal filterDiv green" data-id="svg">
         <div class="periodic-element three">
           <div class="periodic-table-inner">
             <div class="title">Svg</div>
@@ -70,7 +81,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="ul">
+      <button class="open-modal filterDiv red" data-id="ul">
         <div class="periodic-element four">
           <div class="periodic-table-inner">
             <div class="title">Ul</div>
@@ -79,7 +90,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="br">
+      <button class="open-modal filterDiv red" data-id="br">
         <div class="periodic-element four">
           <div class="periodic-table-inner">
             <div class="title">Br</div>
@@ -88,7 +99,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="li">
+      <button class="open-modal filterDiv yellow" data-id="li">
         <div class="periodic-element one">
           <div class="periodic-table-inner">
             <div class="title">Li</div>
@@ -97,7 +108,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="ol">
+      <button class="open-modal filterDiv yellow" data-id="ol">
         <div class="periodic-element one">
           <div class="periodic-table-inner">
             <div class="title">Ol</div>
@@ -106,7 +117,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="img">
+      <button class="open-modal filterDiv green" data-id="img">
         <div class="periodic-element three">
           <div class="periodic-table-inner">
             <div class="title">Img</div>
@@ -115,7 +126,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="nav">
+      <button class="open-modal filterDiv green" data-id="nav">
         <div class="periodic-element three">
           <div class="periodic-table-inner">
             <div class="title">Nav</div>
@@ -124,7 +135,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="em">
+      <button class="open-modal filterDiv blue" data-id="em">
         <div class="periodic-element two">
           <div class="periodic-table-inner">
             <div class="title">Em</div>
@@ -133,7 +144,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="div">
+      <button class="open-modal filterDiv blue" data-id="div">
         <div class="periodic-element two">
           <div class="periodic-table-inner">
             <div class="title">Div</div>
@@ -142,7 +153,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="link">
+      <button class="open-modal filterDiv blue" data-id="link">
         <div class="periodic-element two">
           <div class="periodic-table-inner">
             <div class="title">Link</div>
@@ -151,7 +162,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="i">
+      <button class="open-modal filterDiv red" data-id="i">
         <div class="periodic-element four">
           <div class="periodic-table-inner">
             <div class="title">I</div>
@@ -160,7 +171,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="u">
+      <button class="open-modal filterDiv red" data-id="u">
         <div class="periodic-element four">
           <div class="periodic-table-inner">
             <div class="title">U</div>
@@ -169,7 +180,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="b">
+      <button class="open-modal filterDiv red" data-id="b">
         <div class="periodic-element four">
           <div class="periodic-table-inner">
             <div class="title">B</div>
@@ -178,7 +189,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="col">
+      <button class="open-modal filterDiv blue" data-id="col">
         <div class="periodic-element two">
           <div class="periodic-table-inner">
             <div class="title">Col</div>
@@ -187,7 +198,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="data">
+      <button class="open-modal filterDiv blue" data-id="data">
         <div class="periodic-element two">
           <div class="periodic-table-inner">
             <div class="title">Data</div>
@@ -196,7 +207,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="body">
+      <button class="open-modal filterDiv green" data-id="body">
         <div class="periodic-element three">
           <div class="periodic-table-inner">
             <div class="title">Body</div>
@@ -205,7 +216,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="dfn">
+      <button class="open-modal filterDiv green" data-id="dfn">
         <div class="periodic-element three">
           <div class="periodic-table-inner">
             <div class="title">Dfn</div>
@@ -214,7 +225,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="title">
+      <button class="open-modal filterDiv blue" data-id="title">
         <div class="periodic-element two">
           <div class="periodic-table-inner">
             <div class="title">Title</div>
@@ -223,7 +234,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="meta">
+      <button class="open-modal filterDiv blue" data-id="meta">
         <div class="periodic-element two">
           <div class="periodic-table-inner">
             <div class="title">Meta</div>
@@ -232,7 +243,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="abbr">
+      <button class="open-modal filterDiv yellow" data-id="abbr">
         <div class="periodic-element one">
           <div class="periodic-table-inner">
             <div class="title">Abbr</div>
@@ -241,7 +252,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="form">
+      <button class="open-modal filterDiv red" data-id="form">
         <div class="periodic-element four">
           <div class="periodic-table-inner">
             <div class="title">Form</div>
@@ -250,7 +261,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="h6">
+      <button class="open-modal filterDiv red" data-id="h6">
         <div class="periodic-element four">
           <div class="periodic-table-inner">
             <div class="title">h6</div>
@@ -259,7 +270,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="main">
+      <button class="open-modal filterDiv green" data-id="main">
         <div class="periodic-element three">
           <div class="periodic-table-inner">
             <div class="title">Main</div>
@@ -268,7 +279,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="html">
+      <button class="open-modal filterDiv yellow" data-id="html">
         <div class="periodic-element one">
           <div class="periodic-table-inner">
             <div class="title">Html</div>
@@ -277,7 +288,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="p">
+      <button class="open-modal filterDiv green" data-id="p">
         <div class="periodic-element three">
           <div class="periodic-table-inner">
             <div class="title">P</div>
@@ -286,7 +297,7 @@
         </div>
       </button>
 
-      <button class="open-modal" data-id="href">
+      <button class="open-modal filterDiv green" data-id="href">
         <div class="periodic-element three">
           <div class="periodic-table-inner">
             <div class="title">Href</div>

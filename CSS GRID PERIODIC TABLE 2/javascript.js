@@ -1,3 +1,25 @@
+// Filters
+filterSelection("all");
+
+// Adds the "show" class to selected elements, and removes it from unselected
+function filterSelection(c) {
+  let elements = document.querySelectorAll(".filterDiv");
+  elements.forEach((el) => {
+    if (c == "all" || el.classList.contains(c)) el.classList.add("show");
+    else el.classList.remove("show");
+  });
+}
+
+// Add active class to the current control button (highlight it)
+let btns = document.querySelectorAll("#myBtnContainer btn");
+btns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    var current = document.querySelector("active");
+    current.classList.remove("active");
+    this.classList.add("active");
+  });
+});
+
 // Get the modal
 var modal = document.getElementById("myModal");
 var modalContent = document.getElementById("modalText");
@@ -5,12 +27,7 @@ var modalContent = document.getElementById("modalText");
 // Get the array of buttons with a class of open-modal
 var buttons = document.querySelectorAll(".open-modal");
 
-/*
- * Sample data source
- * id key matches with data-id on the html button
- * content key is the content you want to appear in the modal
- */
-
+// Data source
 var data = [
   {
     id: "h1",
@@ -185,8 +202,6 @@ buttons.forEach((button) => {
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
