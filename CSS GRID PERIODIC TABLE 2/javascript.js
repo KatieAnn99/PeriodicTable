@@ -10,16 +10,6 @@ function filterSelection(c) {
   });
 }
 
-// Add active class to the current control button (highlight it)
-let btns = document.querySelectorAll("#myBtnContainer btn");
-btns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    var current = document.querySelector("active");
-    current.classList.remove("active");
-    this.classList.add("active");
-  });
-});
-
 // Get the modal
 var modal = document.getElementById("myModal");
 var modalContent = document.getElementById("modalText");

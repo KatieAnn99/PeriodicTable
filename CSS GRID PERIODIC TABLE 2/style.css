@@ -29,6 +29,22 @@ a {
   overflow: hidden;
 }
 
+.red {
+  color: rgb(255, 0, 0);
+}
+
+.yellow {
+  color: rgb(203, 203, 68);
+}
+
+.blue {
+  color: blue;
+}
+
+.green {
+  color: green;
+}
+
 .filterDiv {
   float: left;
   background-color: #2196f3;
@@ -54,22 +70,26 @@ a {
   cursor: pointer;
 }
 
-/* Add a light grey background on mouse-over */
-.btn:hover {
-  background-color: #ddd;
+#myBtnContainer {
+  font-family: "poppins", sans-serif;
+  font-weight: bold;
+  width: 50%;
+  margin: auto;
+  position: relative;
+  left: -60px;
 }
 
-/* Add a dark background to the active button */
-.btn.active {
-  background-color: #666;
-  color: white;
+/* Add a light grey background on mouse-over */
+.btn:hover {
+  background-color: #a7a1a1;
 }
 
 .periodic-table {
   display: grid;
   grid-template-columns: repeat(9, 110px);
   grid-template-rows: repeat(4, 110px);
-  grid-gap: 10px;
+  grid-gap: 2px;
+  row-gap: 5px;
   margin: auto;
   max-width: 1200px;
   justify-content: center;
